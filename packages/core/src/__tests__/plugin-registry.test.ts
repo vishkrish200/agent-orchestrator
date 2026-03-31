@@ -185,6 +185,21 @@ describe("loadBuiltins", () => {
     );
   });
 
+  it("registers the docker runtime from importFn", async () => {
+    const registry = createPluginRegistry();
+    const fakeDocker = makePlugin("runtime", "docker");
+
+    await registry.loadBuiltins(undefined, async (pkg: string) => {
+      if (pkg === "@composio/ao-plugin-runtime-docker") return fakeDocker;
+      throw new Error(`Not found: ${pkg}`);
+    });
+
+    expect(registry.list("runtime")).toContainEqual(
+      expect.objectContaining({ name: "docker", slot: "runtime" }),
+    );
+    expect(registry.get("runtime", "docker")).not.toBeNull();
+  });
+
   it("passes configured notifier plugin config to create()", async () => {
     const registry = createPluginRegistry();
     const fakeWebhookNotifier = makePlugin("notifier", "webhook");
