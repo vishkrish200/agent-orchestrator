@@ -239,6 +239,7 @@ export interface RuntimeCreateConfig {
   workspacePath: string;
   launchCommand: string;
   environment: Record<string, string>;
+  runtimeConfig?: Record<string, unknown>;
 }
 
 /** Opaque handle returned by runtime.create() */
@@ -950,6 +951,9 @@ export interface ProjectConfig {
 
   /** Override default runtime */
   runtime?: string;
+
+  /** Runtime-specific configuration */
+  runtimeConfig?: Record<string, unknown>;
 
   /** Override default agent */
   agent?: string;
