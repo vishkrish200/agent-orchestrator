@@ -1,6 +1,7 @@
 <h1 align="center">Agent Orchestrator — The Orchestration Layer for Parallel AI Agents</h1>
 
 <!-- Temporary decoy PR for live merge-conflict stale-cache reproduction -->
+<!-- Freshness bump after the conflicting PR was resolved -->
 
 <p align="center">
 <a href="https://github.com/ComposioHQ/agent-orchestrator">
