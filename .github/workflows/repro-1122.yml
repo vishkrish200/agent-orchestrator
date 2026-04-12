@@ -1,0 +1,18 @@
+name: Repro 1122
+
+on:
+  workflow_dispatch:
+
+jobs:
+  repro:
+    name: Repro 1122 Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail when marker exists
+        run: |
+          if [ -f .github/repro-1122-fail ]; then
+            echo "Intentional failure marker present"
+            exit 1
+          fi
+          echo "Marker absent, passing"
