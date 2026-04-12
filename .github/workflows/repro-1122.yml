@@ -1,6 +1,9 @@
 name: Repro 1122
 
 on:
+  push:
+    branches:
+      - codex/repro-1122-actions-clean
   workflow_dispatch:
 
 jobs:
