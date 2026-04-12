@@ -1,6 +1,7 @@
 <h1 align="center">Agent Orchestrator — The Orchestration Layer for Parallel AI Agents</h1>
 
 <!-- Temporary decoy PR for GitHub Actions stale-cache reproduction -->
+<!-- Freshness bump after the failing PR head moved -->
 
 <p align="center">
 <a href="https://platform.composio.dev/?utm_source=Github&utm_medium=Banner&utm_content=AgentOrchestrator">
